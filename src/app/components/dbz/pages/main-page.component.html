@@ -1,0 +1,15 @@
+<h2>DBZ personajes</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- 1. Comunicacion de padre a hijo -->
+    <!-- pasamos el valor 'characters' a 'app-dbz-list'(c. hijo) a través de un atributo 'characterList'en el html -->
+    <app-dbz-list [characterList]="characters" (onDeleteById)="onDeleteCharacterById($event)"/>
+  </div>
+
+  <div class="col">
+    <!-- 2. Comunicacion de hijo a padre -->
+    <app-dbz-add-character (onNewCharacter)="onAddCharacter($event)"/>
+  </div>
+</div>
